@@ -1,0 +1,37 @@
+1. Classes:
+User: Represents a user who can register and vote in the system. Each user has a username and password.
+Candidate: Represents a candidate in the election. A candidate has a name, a party, and keeps track of the number of votes received.
+Election: Manages the list of candidates and handles vote casting and result display for a specific election (e.g., "2024 Election").
+Voting System: The main class that handles user registration, voting, candidate management, and the overall flow of the election.
+
+2. Core Functionalities:
+User Registration: Users can register with a username and password to participate in the election.
+Authentication: When voting, the system authenticates the user by checking their username and password.
+Add Candidates: Admin can add new candidates to the election by providing their name and party.
+Vote Casting: A registered user can cast their vote for a candidate. The system prevents a user from voting more than once by maintaining a list of votedUsers.
+Vote Confirmation: Before casting a vote, the system asks the user for confirmation (yes/no).
+Display Results: After voting, the election results can be displayed, showing the number of votes for each candidate.
+Display Candidates: Users can view a list of all candidates participating in the election. 
+
+3. Console Menu:
+The system provides a text-based interface with the following menu options:
+
+Register a user.
+Add a candidate.
+Cast a vote (with authentication).
+View the election results.
+View the list of candidates.
+Exit the system.
+
+4. Set and List:
+The code uses a List (specifically ArrayList) to manage collections of users and candidates.
+It uses a Set (specifically HashSet) to keep track of users who have already voted, ensuring that no user votes multiple times.
+
+5. Clearing the Console:
+There is a clearConsole() method that attempts to clear the console screen for both Windows and Unix-based systems, enhancing the user experience by providing a clean interface each time the menu is shown.
+
+
+6. Main Method:
+The main() method drives the program. It continuously displays the menu, takes user input, and performs actions based on the selected option until the user chooses to exit.
+
+This system mimics a basic voting process that could be used for elections, complete with user authentication, vote casting, and result display functionalities.
